@@ -4,7 +4,7 @@ A small iPhone/Android app with one button. Tapping it shows a popup that says "
 
 You need:
 - A computer (this guide is for Windows)
-- Node.js: download the LTS version from https://nodejs.org and install it
+- Node.js **22 LTS** (use this exact major version; Node 26 does not work with this project). Download it from https://nodejs.org (choose the 22 LTS installer) and install it
 - The **Expo Go** app on your iPhone (free, from the App Store)
 
 ## Part 1: Get the project on your computer
@@ -21,11 +21,13 @@ Pick one way:
 ## Part 2: Install and start (on your computer)
 
 1. Open **PowerShell** (or Terminal) in the project folder. In File Explorer, open the folder, click the address bar, type `powershell`, and press Enter.
-2. Install the project packages. You only do this once:
+2. Install the project packages. You only do this once. Check your version first with `node -v` (it must start with `v22`):
 
    ```powershell
-   npm install
+   npm ci
    ```
+
+   If you already have a `node_modules` folder from an older attempt, delete it first: `Remove-Item -Recurse -Force node_modules`.
 
 3. Start the app:
 
